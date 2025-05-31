@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salsa Estéreo Cali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #0f0f0f, #1c1c1c);
+      color: white;
+      font-family: 'Russo One', sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #ff4444;
+      text-shadow: 0 0 10px #ff4444;
+    }
+
+    .player-container {
+      margin-top: 20px;
+    }
+
+    .btn-play {
+      background: #ff4444;
+      border: none;
+      color: white;
+      font-size: 1.5em;
+      padding: 15px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 20px #ff4444;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-play:hover {
+      transform: scale(1.1);
+    }
+
+    .animation {
+      width: 120px;
+      height: 120px;
+      margin: 20px auto;
+      border-radius: 50%;
+      border: 6px solid #ff4444;
+      animation: pulse 2s infinite;
+      box-shadow: 0 0 30px #ff4444;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      color: #888;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Salsa Estéreo Cali</h1>
+  <div class="animation"></div>
+
+  <div class="player-container">
+    <button class="btn-play" onclick="document.getElementById('radio').play()">▶ Escuchar Ahora</button>
+    <audio id="radio" src="http://stream.zeno.fm/6utmyg7w9mzuv" preload="none"></audio>
+  </div>
+
+  <footer>
+    Transmitiendo salsa 24/7 desde Cali, Colombia 🎶
+  </footer>
+
+</body>
+  </html>
