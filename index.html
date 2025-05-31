@@ -1,97 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Salsa Estéreo Cali</title>
-  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background: linear-gradient(to bottom right, #0f0f0f, #1c1c1c);
-      color: white;
-      font-family: 'Russo One', sans-serif;
-      text-align: center;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(145deg, #111, #222);
+      color: #fff;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: center;
       height: 100vh;
-      overflow: hidden;
+      text-align: center;
     }
-
     h1 {
-      font-size: 3em;
+      font-size: 2.5rem;
       margin-bottom: 10px;
-      color: #ff4444;
-      text-shadow: 0 0 10px #ff4444;
-    }
-
-    .player-container {
-      margin-top: 20px;
-    }
-
-    .btn-play {
-      background: #ff4444;
-      border: none;
-      color: white;
-      font-size: 1.5em;
-      padding: 15px 30px;
-      border-radius: 30px;
-      cursor: pointer;
-      box-shadow: 0 0 20px #ff4444;
-      transition: transform 0.3s ease;
-    }
-
-    .btn-play:hover {
-      transform: scale(1.1);
-    }
-
-    .animation {
-      width: 120px;
-      height: 120px;
-      margin: 20px auto;
-      border-radius: 50%;
-      border: 6px solid #ff4444;
       animation: pulse 2s infinite;
-      box-shadow: 0 0 30px #ff4444;
     }
-
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      50% {
-        transform: scale(1.2);
-        opacity: 0.6;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
+      0%, 100% { transform: scale(1); color: #ff4c4c; }
+      50% { transform: scale(1.1); color: #ffc107; }
     }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      color: #888;
-      font-size: 0.9em;
+    audio {
+      margin-top: 20px;
+      width: 80%;
+      max-width: 400px;
     }
   </style>
 </head>
 <body>
-
-  <h1>Salsa Estéreo Cali</h1>
-  <div class="animation"></div>
-
- <audio controls autoplay>
-  <source src="https://stream-50.zeno.fm/bv34nzz5dxhvv" type="audio/mpeg">
-</audio>
-
-  <footer>
-    Transmitiendo salsa 24/7 desde Cali, Colombia 🎶
-  </footer>
-
+  <h1>🎶 Salsa Estéreo Cali</h1>
+  <p>Emisora en vivo 24/7</p>
+  <audio controls autoplay>
+    <source src="https://stream-50.zeno.fm/bv34nzz5dxhvv" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
 </body>
-  </html>
+</html>
